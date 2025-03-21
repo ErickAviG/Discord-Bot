@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from dotenv import load_dotenv
 import os
 
 # Crea el bot con prefijo "!"
@@ -17,5 +18,6 @@ async def ping(ctx):
     await ctx.send("Pong! 🏓")
 
 # Iniciar el bot con el token
-TOKEN = os.getenv("MTEyMTg0NjM3MjUzOTMxNDIxNg.Gz71dz.dX502m5KjacaBNIlxX-jcQGW_jQmvdN2AzKOKY")  # Toma el token desde una variable de entorno
+load_dotenv()
+TOKEN = os.getenv("TOKEN")  # Toma el token desde una variable de entorno
 bot.run(TOKEN)
