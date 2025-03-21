@@ -18,6 +18,6 @@ async def ping(ctx):
     await ctx.send("Pong! 🏓")
 
 # Iniciar el bot con el token
-load_dotenv()
-TOKEN = os.getenv("TOKEN")  # Toma el token desde una variable de entorno
+
+TOKEN = os.environ.get("TOKEN")
 bot.run(TOKEN)
