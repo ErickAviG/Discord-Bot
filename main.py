@@ -5,6 +5,7 @@ import os
 
 # Crea el bot con prefijo "!"
 intents = discord.Intents.default()
+intents.message_content = True  # Habilita el intent de contenido de mensajes
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 # Evento cuando el bot está listo
